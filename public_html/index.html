@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Example</title>
+<div id="container" style="width:500px">
+
+<div id="header" style="background-color:#edf0f5;">
+
+<script LANGUAGE="JavaScript" type="text/javascript">
+function display() {
+    DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=500,height=500')
+    message = "<ul><li><b>FIRST NAME: </b>" + document.form1.firstname.value;
+    message += "<li><b>LAST NAME: </b>" + document.form1.lastname.value;
+    message += "<li><b>EMAIL: </b>" + document.form1.email.value; message += "<li><b>Gender: </b>" + document.form1.gender.value + "</ul>";
+    DispWin.document.write(message);
+}
+</script>
+
+</head>
+<body>
+<h1>Sign Up</h1>
+Its free and always will be.
+
+
+<form name="form1">
+<p><input TYPE="TEXT" SIZE="20" NAME="firstname" placeholder="First name">
+
+<input TYPE="TEXT" SIZE="30" NAME="lastname" placeholder="Last name">
+</p>
+<p><input TYPE="TEXT" SIZE="15" NAME="email" placeholder="Email">
+</p>
+<p><input TYPE="TEXT" SIZE="15" NAME="re-enter email" placeholder="Re-enter Email">
+</p>
+<p> <input TYPE="RADIO" NAME="gender" value="Male">Male
+<input TYPE="RADIO" NAME="gender" value="Female">Female
+<p> <input type="password" name="pwd" placeholder="New Password"> </p>
+<p> Birthday </p>
+<select name="Month"> 
+  <option value="Jan">Jan</option>
+  <option value="Feb">Feb</option>
+  <option value="Mar">Mar</option>
+  <option value="Apr">Apr</option>
+<option value="May">May</option>
+<option value="Jun">Jun</option>
+<option value="Jul">Jul</option>
+<option value="Aug">Aug</option>
+<option value="Sep">Sep</option>
+<option value="Oct">Oct</option>
+<option value="Nov">Nov</option>  
+<option value="Dec">Dec</option>
+</select>
+<p> <font size="2">By clicking Sign Up you agree to our <a href="www.terms.com" target="_blank"> Terms </a> and that you have read over <a href ="www.datause.com" target="_blank"> Data Use Policy </a>, including our <a href="www.cookieuse.com" target="_blank"> Cookie Use. </a> </font></p> 
+
+
+<p><input TYPE="BUTTON" VALUE="Sign Up" onClick="display()"></p>
+</form>
+</body>
+</html>
